@@ -1,1 +1,15 @@
 
+#include <stdio.h>
+
+  int main() {
+      int i = 1; // Variable sin control
+
+      while (i <= 5) { // Mientras i sea menor o igual que 5
+          printf("%d\n", i); // Muestra el valor actual
+          i++; // Actualiza la variable
+
+          }
+
+          return 0;
+
+} 
