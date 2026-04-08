@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main() {
+    int i = 1; //Variable de control
+
+     do {
+
+        printf("%d\n", i); //Muestra el valor actual
+        i++; //Actualiza la variable
+      } while (i<= 5); // La condicion se verifica al final
+
+      return 0;
+} 
