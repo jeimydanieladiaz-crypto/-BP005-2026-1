@@ -1,1 +1,19 @@
+#include <stdio.h>
 
+int main() {
+    int contador = 1; //Controla cuantas veces repetimos
+    int numero; //Almacena cada numero ingresado
+    int suma = 0; //Acumulador
+
+
+    while (contador <= 3) { // Se repetira 3 veces
+        printf("Ingrese un numero. ");
+        scanf("%d", &numero);
+
+        suma = suma + numero; // Acumula el valor leido
+        contador++; //Avanza al siguiente ciclo
+    }
+
+    printf("La suma es: %d\n", suma);
+
+    return 0; 
