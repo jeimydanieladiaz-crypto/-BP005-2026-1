@@ -1,1 +1,35 @@
+include <stdio.h>
 
+
+float calcularArea(float base, float altura) {
+    return base * altura;
+}
+
+
+float calcularPerimetro(float base, float altura) {
+    return 2 * (base + altura);
+}
+
+
+void mostrarResultados(float area, float perimetro) {
+    printf("Area: %.2f\n", area);
+    printf("Perimetro: %.2f\n", perimetro);
+}
+
+
+int main() {
+    float b, h, a, p;
+
+    printf("Digite la base: ");
+    scanf("%f", &b);
+    printf("Digite la altura: ");
+    scanf("%f", &h);
+
+
+    a = calcularArea(b, h);
+    p = calcularPerimetro(b, h);
+
+    mostrarResultados(a, p);
+
+    return 0;
+} 
