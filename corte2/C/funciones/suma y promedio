@@ -1,1 +1,41 @@
+#include <stdio.h>
 
+void leerArreglo(int v[], int n);
+int sumarArreglo(int v[], int n);
+float calcularPromedio(int suma, int n);
+void mostrarArreglo(int v[], int n);
+
+int main() {
+    int numeros[5], sumaTotal;
+    float promedioTotal;
+    leerArreglo(numeros, 5);
+    printf("Elementos del arreglo:\n");
+    mostrarArreglo(numeros, 5);
+    sumaTotal = sumarArreglo(numeros, 5);
+    promedioTotal = calcularPromedio(sumaTotal, 5);
+    printf("Suma: %d\n", sumaTotal);
+    printf("Promedio: %.2f\n", promedioTotal);
+    return 0;
+}
+
+void leerArreglo(int v[], int n) {
+    for (int i = 0; i < n; i++) {
+        printf("Digite el elemento %d: ", i);
+        scanf("%d", &v[i]);
+    }
+}
+
+int sumarArreglo(int v[], int n) {
+    int suma = 0;
+    for (int i = 0; i < n; i++) suma += v[i];
+    return suma;
+}
+
+float calcularPromedio(int suma, int n) {
+    return (float)suma / n;
+}
+
+void mostrarArreglo(int v[], int n) {
+    for (int i = 0; i < n; i++) printf("%d ", v[i]);
+    printf("\n");
+} 
