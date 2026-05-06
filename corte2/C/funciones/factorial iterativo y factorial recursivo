@@ -1,1 +1,24 @@
+#include <stdio.h>
 
+int factorialIterativo(int n);
+int factorialRecursivo(int n);
+
+int main() {
+    int numero;
+    printf("Digite un numero entero no negativo: ");
+    scanf("%d", &numero);
+    printf("Factorial iterativo: %d\n", factorialIterativo(numero));
+    printf("Factorial recursivo: %d\n", factorialRecursivo(numero));
+    return 0;
+}
+
+int factorialIterativo(int n) {
+    int fact = 1;
+    for (int i = 1; i <= n; i++) fact *= i;
+    return fact;
+}
+
+int factorialRecursivo(int n) {
+    if (n <= 1) return 1;
+    return n * factorialRecursivo(n - 1);
+} 
