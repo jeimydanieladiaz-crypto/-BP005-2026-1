@@ -1,1 +1,35 @@
+#include <iostream>
+using namespace std;
 
+void leerArreglo(int v[], int n);
+int obtenerMayor(int v[], int n);
+int obtenerMenor(int v[], int n);
+
+int main() {
+    int numeros[6], mayor, menor;
+    leerArreglo(numeros, 6);
+    mayor = obtenerMayor(numeros, 6);
+    menor = obtenerMenor(numeros, 6);
+    cout << "Mayor: " << mayor << endl;
+    cout << "Menor: " << menor << endl;
+    return 0;
+}
+
+void leerArreglo(int v[], int n) {
+    for (int i = 0; i < n; i++) {
+        cout << "Digite el elemento " << i << ": ";
+        cin >> v[i];
+    }
+}
+
+int obtenerMayor(int v[], int n) {
+    int max = v[0];
+    for (int i = 1; i < n; i++) if (v[i] > max) max = v[i];
+    return max;
+}
+
+int obtenerMenor(int v[], int n) {
+    int min = v[0];
+    for (int i = 1; i < n; i++) if (v[i] < min) min = v[i];
+    return min;
+} 
