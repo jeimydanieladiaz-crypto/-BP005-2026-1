@@ -1,1 +1,20 @@
-.
+#include <stdio.h>
+
+
+float convertirAFahrenheit(float celsius);
+
+int main() {
+    float celsius, fahrenheit;
+
+    printf("Digite la temperatura en Celsius: ");
+    if (scanf("%f", &celsius) != 1) {
+        return 1;
+    }
+
+
+    fahrenheit = convertirAFahrenheit(celsius);
+
+
+    printf("Temperatura en Fahrenheit: %.2f\n", fahrenheit);
+
+    return 0; 
